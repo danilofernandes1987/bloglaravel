@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hello-world','App\Http\Controllers\HelloWorldController@index');
+
+Route::resource('/users','App\Http\Controllers\UserController');
