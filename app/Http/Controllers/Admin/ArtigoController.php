@@ -4,15 +4,23 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Artigo;
 
 class ArtigoController extends Controller
 {
+    private $artigo;
+
+    public function __construct(Artigo $artigo)
+    {
+        $this->artigo = $artigo;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $artigos = $this->artigo->orderBy('id','DESC')->paginate(5);
+        return view('artigos.index',compact('artigos'));
     }
 
     /**
