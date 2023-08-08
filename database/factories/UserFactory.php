@@ -16,10 +16,7 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-<<<<<<< HEAD
-=======
             'moderador' => 0,
->>>>>>> 3bd95285b32793336dbb0da28c7af55a6bf0da85
             'password' => $password?:$password = bcrypt('laravel'),
             'remember_token' => Str::random(10),
             'created_at' => now(),
