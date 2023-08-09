@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello-world','App\Http\Controllers\HelloWorldController@index');
+//Route::get('hello-world','App\Http\Controllers\HelloWorldController@index');
 
-Route::resource('/users','App\Http\Controllers\UserController');
+//Route::resource('/users','App\Http\Controllers\UserController');
+
+Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')->group(function(){
+    Route::prefix('artigos')->name('artigos.')->group(function(){
+        Route::get('/index','ArtigoController@index')->name('index');
+    });
+});

@@ -16,4 +16,8 @@ class Artigo extends Model
         'conteudo',
         'slug',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

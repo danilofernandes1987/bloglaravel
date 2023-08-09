@@ -10,9 +10,9 @@
     <meta name="_token" content="{{csrf_token()}}">
 
     <title>Painel Administrativo</title>
-    <link rel="stylesheet" href="{{asset/bootstrap-5.3.1-dist/css/bootstrap.css}}">
-    <link rel="stylesheet" href="{{asset/bootstrap-5.3.1-dist/css/bootstrap.min.css}}">
-    <link rel="stylesheet" href="{{asset/fontawesome/css/all.css}}">
+    <link rel="stylesheet" href="{{asset('bootstrap-5.3.1-dist/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('bootstrap-5.3.1-dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('fontawesome/css/all.css')}}">
     
 </head>
 
