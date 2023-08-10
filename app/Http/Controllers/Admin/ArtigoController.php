@@ -17,10 +17,17 @@ class ArtigoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $artigos = $this->artigo->orderBy('id','DESC')->paginate(5);
-        return view('artigos.index',compact('artigos'));
+        if (is_null($request->pesquisa)) {
+            $artigos = $this->artigo->orderBy('id', 'DESC')->paginate(5);
+        } else {
+            $query = Artigo::with('User')->where('titulo','LIKE','%'.$request->pesquisa.'%');
+
+            $artigos = $query->orderBy('id', 'DESC')->paginate(5);
+        }
+
+        return view('artigos.index', compact('artigos'));
     }
 
     /**

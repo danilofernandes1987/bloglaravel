@@ -6,7 +6,7 @@
     <div class="row">
         <div class="card-body">
             <section class="border p-4 mb-4 d-flex align-items-left">
-                <form action="" class="form-search" method="GET">
+                <form action="{{route('admin.artigos.index')}}" class="form-search" method="GET">
                     <div class="col-sm-12">
                         <div class="input-group rounded">
                             <input type="text" name="pesquisa" class="form-control rounded float-left" placeholder="Busca" aria-label="Search" aria-describedby="search-addon">

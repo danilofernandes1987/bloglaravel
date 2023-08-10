@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a href="" class="nav-link">Artigos</a>
+                    <a href="{{route('admin.artigos.index')}}" class="nav-link">Artigos</a>
                 </li>
             </ul>
         </div>
