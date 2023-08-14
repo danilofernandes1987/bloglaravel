@@ -20,6 +20,7 @@ class ArtigoController extends Controller
     public function index()
     {
         $artigos = $this->artigo->orderBy('id','DESC')->paginate(5);
+        dd($artigos);
         return view('artigos.index',compact('artigos'));
     }
 
