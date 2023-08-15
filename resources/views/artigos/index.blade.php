@@ -10,8 +10,7 @@
                     <div class="col-sm-12">
                         <div class="input-group rounded">
                             <input type="text" name="pesquisa" class="form-control rounded float-left" placeholder="Busca" aria-label="Search" aria-describedby="search-addon">
-                            <a href="{{route('admin.artigos.create')}}" type="button" class="AddArtigoModal_btn input-group-text border-0"
-                            style="background: transparent; border:none"><i class="fas fa-plus"></i></a>
+                            <a href="{{route('admin.artigos.create')}}" type="button" class="AddArtigoModal_btn input-group-text border-0" style="background: transparent; border:none"><i class="fas fa-plus"></i></a>
                         </div>
                     </div>
                 </form>
@@ -37,8 +36,12 @@
                         <td>{{$artigo->updated_at}}</td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="edit_artigo_btn fas fa-edit" style="background: transparent;border:none"></button>
-                                <button type="button" class="delete_artigo_btn fas fa-trash" style="background: transparent;border:none"></button>
+                                <form action="{{route('admin.artigos.delete',['id'=>$artigo->id])}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <a href="{{route('admin.artigos.edit',['id'=>$artigo->id])}}" type="button" class="edit_artigo_btn fas fa-edit" style="background: transparent;border: none;"></a>
+                                    <button type="submit" class="delete_artigo_btn fas fa-trash" style="background: transparent;border:none"></button>
+                                </form>
                             </div>
                         </td>
                     </tr>

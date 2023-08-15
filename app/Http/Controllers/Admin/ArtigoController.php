@@ -47,7 +47,9 @@ class ArtigoController extends Controller
 
         $data['user_id'] = 1;
 
-        dd(Artigo::create($data));
+        Artigo::create($data);
+
+        return redirect()->route('admin.artigos.index');
     }
 
     /**
@@ -64,7 +66,7 @@ class ArtigoController extends Controller
     public function edit(string $id)
     {
         $artigo = Artigo::findOrFail($id);
-        dd($artigo);
+        return view('artigos.edit',compact('artigo'));
     }
 
     /**
@@ -72,7 +74,11 @@ class ArtigoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $artigo = Artigo::findOrFail($id);
+        $artigo->update($data);
+
+        return redirect()->route('admin.artigos.index');
     }
 
     /**
@@ -80,6 +86,9 @@ class ArtigoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $artigo = Artigo::findOrFail($id);
+        $artigo->delete();
+
+        return redirect()->route('admin.artigos.index');
     }
 }
