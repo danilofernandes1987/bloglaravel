@@ -10,9 +10,8 @@
                     <div class="col-sm-12">
                         <div class="input-group rounded">
                             <input type="text" name="pesquisa" class="form-control rounded float-left" placeholder="Busca" aria-label="Search" aria-describedby="search-addon">
-                            <button class="input-group-text border-0" type="submit" style="background:transparent; border:none">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                            <a href="{{route('admin.artigos.create')}}" type="button" class="AddArtigoModal_btn input-group-text border-0"
+                            style="background: transparent; border:none"><i class="fas fa-plus"></i></a>
                         </div>
                     </div>
                 </form>
