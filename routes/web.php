@@ -25,6 +25,6 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')-
     Route::prefix('artigos')->name('artigos.')->group(function () {
         Route::get('/index', 'ArtigoController@index')->name('index');
         Route::get('/create', 'ArtigoController@create')->name('create');
-        Route::get('/store', 'ArtigoController@store')->name('store');
+        Route::post('/store', 'ArtigoController@store')->name('store');
     });
 });

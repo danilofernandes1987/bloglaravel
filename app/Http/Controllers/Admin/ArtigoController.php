@@ -43,7 +43,11 @@ class ArtigoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'titulo' => $request->input('titulo'),
+            'descricao' => $request->input('descricao')
+        ];
+        dd($data);
     }
 
     /**
