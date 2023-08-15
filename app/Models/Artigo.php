@@ -15,6 +15,7 @@ class Artigo extends Model
         'descricao',
         'conteudo',
         'slug',
+        'user_id',
     ];
 
     public function user(){

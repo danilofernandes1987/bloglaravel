@@ -43,11 +43,11 @@ class ArtigoController extends Controller
      */
     public function store(Request $request)
     {
-        $data = [
-            'titulo' => $request->input('titulo'),
-            'descricao' => $request->input('descricao')
-        ];
-        dd($data);
+        $data = $request->all();
+
+        $data['user_id'] = 1;
+
+        dd(Artigo::create($data));
     }
 
     /**
@@ -63,7 +63,8 @@ class ArtigoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $artigo = Artigo::findOrFail($id);
+        dd($artigo);
     }
 
     /**

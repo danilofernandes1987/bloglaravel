@@ -26,5 +26,6 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')-
         Route::get('/index', 'ArtigoController@index')->name('index');
         Route::get('/create', 'ArtigoController@create')->name('create');
         Route::post('/store', 'ArtigoController@store')->name('store');
+        Route::get('/edit/{id}', 'ArtigoController@edit')->name('edit');
     });
 });
