@@ -35,6 +35,11 @@
             @yield('content')
         </main>
     </div>
+    <!--jquery-->
+    <script src="{{asset('/jquery/jquery-3.7.0.js')}}" type="text/javascript"> </script>
+    <!--bootstrap-->
+    <script src="{{asset('/bootstrap-5.3.1-dist/js/bootstrap.js')}}" type="text/javascript"> </script>
+    <script src="{{asset('/bootstrap-5.3.1-dist/js/bootstrap.min.js')}}" type="text/javascript"> </script>
 </body>
 
 </html>
