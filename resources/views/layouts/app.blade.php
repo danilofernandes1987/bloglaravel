@@ -40,6 +40,7 @@
     <!--bootstrap-->
     <script src="{{asset('/bootstrap-5.3.1-dist/js/bootstrap.js')}}" type="text/javascript"> </script>
     <script src="{{asset('/bootstrap-5.3.1-dist/js/bootstrap.min.js')}}" type="text/javascript"> </script>
+    @yield('scripts')
 </body>
 
 </html>

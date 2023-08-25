@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Artigo;
+use Illuminate\Support\Facades\Validator;
 
 class ArtigoController extends Controller
 {
@@ -35,7 +36,7 @@ class ArtigoController extends Controller
      */
     public function create()
     {
-        return view('artigos.create');
+        //return view('artigos.create');
     }
 
     /**
